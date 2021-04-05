@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerAdvLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=LAPTOP-MN7RK4UF\\MIHIR;initial catalog=AdventureWorks2012",
+			"userName": "LAPTOP-MN7RK4UF\\kalem",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkMjY0MDc1NC0zY2Q1LTRiOTItYmRiYS1hZmZjNjZmMDA0YmQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "OnPremIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
