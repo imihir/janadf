@@ -1,0 +1,9 @@
+{
+	"name": "mihirdemoltiADF",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9fbbed91-4473-43f2-993a-a1f5a1ec5552",
+		"tenantId": "8e694c32-2956-4ed7-bc77-daf739a3d73a"
+	}
+}
