@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mihirdemoltiADF"
+		},
+		"AzureBlobStorageLS_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLS_connectionString": {
+			"value": ""
+		},
+		"SqlServerAdvLS_connectionString": {
+			"value": ""
+		},
+		"SqlServerAdvLS_password": {
+			"value": ""
+		},
+		"SqlServerLS_connectionString": {
+			"value": ""
+		},
+		"SqlServerLS_password": {
+			"value": ""
+		},
+		"SqlServerAdvLS_properties_typeProperties_userName": {
+			"value": "LAPTOP-MN7RK4UF\\kalem"
+		},
+		"SqlServerLS_properties_typeProperties_userName": {
+			"value": "LAPTOP-MN7RK4UF\\kalem"
+		}
+	}
+}
