@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLS'"
 		},
+		"AzureSqlDemoDBLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDemoDBLS'"
+		},
+		"AzureSqlsampleDBLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlsampleDBLS'"
+		},
 		"SqlServerAdvLS_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServerAdvLS'"
@@ -71,6 +79,12 @@
 					},
 					"AzureSqlDatabaseLS_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseLS_connectionString')]"
+					},
+					"AzureSqlDemoDBLS_connectionString": {
+						"value": "[parameters('AzureSqlDemoDBLS_connectionString')]"
+					},
+					"AzureSqlsampleDBLS_connectionString": {
+						"value": "[parameters('AzureSqlsampleDBLS_connectionString')]"
 					},
 					"SqlServerAdvLS_connectionString": {
 						"value": "[parameters('SqlServerAdvLS_connectionString')]"

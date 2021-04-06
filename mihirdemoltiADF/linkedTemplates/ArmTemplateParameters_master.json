@@ -11,6 +11,12 @@
 		"AzureSqlDatabaseLS_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDemoDBLS_connectionString": {
+			"value": ""
+		},
+		"AzureSqlsampleDBLS_connectionString": {
+			"value": ""
+		},
 		"SqlServerAdvLS_connectionString": {
 			"value": ""
 		},
