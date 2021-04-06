@@ -29,11 +29,17 @@
 		"SqlServerLS_password": {
 			"value": ""
 		},
+		"OnpremLS_connectionString": {
+			"value": ""
+		},
 		"SqlServerAdvLS_properties_typeProperties_userName": {
 			"value": "LAPTOP-MN7RK4UF\\kalem"
 		},
 		"SqlServerLS_properties_typeProperties_userName": {
 			"value": "LAPTOP-MN7RK4UF\\kalem"
+		},
+		"OnpremLS_properties_typeProperties_userName": {
+			"value": "@{linkedService().username}"
 		},
 		"containerUri": {
 			"value": ""
