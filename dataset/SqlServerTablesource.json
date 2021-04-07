@@ -1,10 +1,6 @@
 {
 	"name": "SqlServerTablesource",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "SqlServerLS",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"tablename": {
 				"type": "string",
