@@ -60,7 +60,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select SalesOrderID,SalesOrderID,SalesOrderID,SalesOrderID,UnitPrice,UnitPrice from [SalesLT].[SalesOrderDetail] where ModifiedDate = @{item().modifieddate}",
+										"value": "select SalesOrderID,SalesOrderID,SalesOrderID,SalesOrderID,UnitPrice,UnitPrice from [SalesLT].[SalesOrderDetail] where ModifiedDate = @{item().ModifiedDate}",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
