@@ -5,12 +5,21 @@
 			"referenceName": "AzureSqlDemoDBLS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "history"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "salesTerretoryHistory"
+			"table": {
+				"value": "@dataset().filename",
+				"type": "Expression"
+			}
 		}
 	}
 }
