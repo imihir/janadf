@@ -1,15 +1,9 @@
 {
-	"name": "SqlServerTable1",
+	"name": "SqlServerTable4",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "OnpremLS",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"servername": "LAPTOP-MN7RK4UF\\MIHIR",
-				"databasename": "AdventureWorksDW2012",
-				"username": "LAPTOP-MN7RK4UF\\kalem",
-				"password": "Sucheta1102"
-			}
+			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
