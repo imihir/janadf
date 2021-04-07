@@ -1,0 +1,16 @@
+{
+	"name": "AzureDataLakeStore1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://mihirgen1acc.azuredatalakestore.net/webhdfs/v1",
+			"servicePrincipalId": "3c1b374a-fa77-4184-9beb-8beda5819a1d",
+			"tenant": "8e694c32-2956-4ed7-bc77-daf739a3d73a",
+			"subscriptionId": "e18ff53c-bf6a-4a5d-9dd9-f9195dfef8e4",
+			"resourceGroupName": "mihirLTIRG",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIk1JSElSREVNT0xUSUFERl9hMDI5MDkyOS1mMTk3LTQwYmEtYjZhMS03YTIyOWZjM2MwNDUiDQp9"
+		}
+	}
+}
