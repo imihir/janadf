@@ -23,7 +23,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTable9",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
