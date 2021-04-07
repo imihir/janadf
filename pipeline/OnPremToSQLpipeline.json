@@ -36,14 +36,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SqlServerTable3",
+						"referenceName": "SqlServerTable4",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "AzureSqlTable5",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
