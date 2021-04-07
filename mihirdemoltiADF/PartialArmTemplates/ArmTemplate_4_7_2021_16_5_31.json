@@ -1,0 +1,37 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "mihirdemoltiADF"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStore1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDataLakeStore",
+				"typeProperties": {
+					"dataLakeStoreUri": "https://mihirgen1acc.azuredatalakestore.net/webhdfs/v1",
+					"servicePrincipalId": "3c1b374a-fa77-4184-9beb-8beda5819a1d",
+					"servicePrincipalKey": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"tenant": "8e694c32-2956-4ed7-bc77-daf739a3d73a",
+					"subscriptionId": "e18ff53c-bf6a-4a5d-9dd9-f9195dfef8e4",
+					"resourceGroupName": "mihirLTIRG"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
