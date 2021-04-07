@@ -22,7 +22,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat(dataset().day,dataset().month,dataset().year)",
+					"value": "@concat(dataset().day,dataset().month,dataset().year,'.txt')",
 					"type": "Expression"
 				},
 				"container": "modifieddate"
