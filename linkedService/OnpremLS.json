@@ -28,7 +28,7 @@
 			"password": "@{linkedService().password}"
 		},
 		"connectVia": {
-			"referenceName": "Onprem",
+			"referenceName": "onprem",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
