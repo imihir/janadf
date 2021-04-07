@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select distinct month (ModifiedDate) as month , year (ModifiedDate ) as year , day (ModifiedDate) as day, ModifiedDate from Sales.SalesOrderDetail",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -61,7 +62,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select SalesOrderID,SalesOrderID,SalesOrderID,SalesOrderID,UnitPrice,UnitPrice from [SalesLT].[SalesOrderDetail] where ModifiedDate = @{item().ModifiedDate}",
+										"value": "select Salesorderid, salesorderdetailid, orderqty, productid, unitprice, linetotal from saleslt.SalesOrderDetail where modifieddate = '@{item().modifieddate}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -81,6 +82,84 @@
 								"enableStaging": false,
 								"translator": {
 									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "Salesorderid",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"type": "Int32",
+												"physicalType": "Int32",
+												"ordinal": 1
+											}
+										},
+										{
+											"source": {
+												"name": "salesorderdetailid",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"type": "Int32",
+												"physicalType": "Int32",
+												"ordinal": 2
+											}
+										},
+										{
+											"source": {
+												"name": "orderqty",
+												"type": "Int16",
+												"physicalType": "smallint"
+											},
+											"sink": {
+												"type": "Int16",
+												"physicalType": "Int16",
+												"ordinal": 3
+											}
+										},
+										{
+											"source": {
+												"name": "productid",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"type": "Int32",
+												"physicalType": "Int32",
+												"ordinal": 4
+											}
+										},
+										{
+											"source": {
+												"name": "unitprice",
+												"type": "Decimal",
+												"physicalType": "money",
+												"scale": 4,
+												"precision": 19
+											},
+											"sink": {
+												"type": "Decimal",
+												"physicalType": "Decimal",
+												"ordinal": 5
+											}
+										},
+										{
+											"source": {
+												"name": "linetotal",
+												"type": "Decimal",
+												"physicalType": "decimal",
+												"scale": 6,
+												"precision": 38
+											},
+											"sink": {
+												"type": "Decimal",
+												"physicalType": "Decimal",
+												"ordinal": 6
+											}
+										}
+									],
 									"typeConversion": true,
 									"typeConversionSettings": {
 										"allowDataTruncation": true,
