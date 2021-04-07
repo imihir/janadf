@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlsampleDBLS'"
 		},
+		"OnpremLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'OnpremLS'"
+		},
 		"SqlServerAdvLS_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServerAdvLS'"
@@ -39,9 +43,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServerLS'"
 		},
-		"OnpremLS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'OnpremLS'"
+		"OnpremLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "@{linkedService().username}"
 		},
 		"SqlServerAdvLS_properties_typeProperties_userName": {
 			"type": "string",
@@ -50,10 +54,6 @@
 		"SqlServerLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "LAPTOP-MN7RK4UF\\kalem"
-		},
-		"OnpremLS_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "@{linkedService().username}"
 		},
 		"containerUri": {
 			"type": "string",
@@ -106,17 +106,11 @@
 					"SqlServerLS_password": {
 						"value": "[parameters('SqlServerLS_password')]"
 					},
-					"OnpremLS_connectionString": {
-						"value": "[parameters('OnpremLS_connectionString')]"
-					},
 					"SqlServerAdvLS_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServerAdvLS_properties_typeProperties_userName')]"
 					},
 					"SqlServerLS_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServerLS_properties_typeProperties_userName')]"
-					},
-					"OnpremLS_properties_typeProperties_userName": {
-						"value": "[parameters('OnpremLS_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -135,6 +129,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"OnpremLS_connectionString": {
+						"value": "[parameters('OnpremLS_connectionString')]"
+					},
+					"OnpremLS_properties_typeProperties_userName": {
+						"value": "[parameters('OnpremLS_properties_typeProperties_userName')]"
 					}
 				}
 			},
