@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
+				"name": "Lookup5",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -31,7 +31,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Lookup5",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -40,7 +40,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output.value",
+						"value": "@activity('Lookup5').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -60,7 +60,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select SalesOrderID,SalesOrderID,SalesOrderID,SalesOrderID,UnitPrice,UnitPrice from [SalesLT].[SalesOrderDetail] where ModifiedDate = '@{item().modifieddate}'",
+										"value": "select SalesOrderID,SalesOrderID,SalesOrderID,SalesOrderID,UnitPrice,UnitPrice from [SalesLT].[SalesOrderDetail] where ModifiedDate = @{item().modifieddate}",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
