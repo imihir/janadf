@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerADV",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=LAPTOP-MN7RK4UF\\MIHIR;initial catalog=AdventureWorks2012",
+			"userName": "kalem",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxMTkzOTNjNC0xNDBiLTQ4ZTYtYjU2My04ZWM2YTM1YjIzNjMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "onprem",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
