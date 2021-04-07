@@ -1,0 +1,51 @@
+{
+	"name": "specificCopypipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select c.firstname+ ' ' + c.lastname + ' bought ' + p.name + ' from '  + c.salesperson + ' worth ' + cast (so.linetotal as nvarchar)  from [SalesLT].[SalesOrderDetail] so join [SalesLT].[SalesOrderHeader] sh on sh.salesorderid = so.salesorderid  join [SalesLT].[Product] p on so.productid = p.productid     join    [SalesLT].[Customer]  c on c.customerid = sh.customerid",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSqlTable3",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Json3",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
