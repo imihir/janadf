@@ -21,7 +21,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "modifieddate"
+				"fileName": {
+					"value": "@concat(dataset().day,dataset().month,dataset().year)",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
